@@ -6,4 +6,6 @@ import com.labeng.entities.Usuarios;
 
 public interface UsuariosRepository extends JpaRepository<Usuarios, Long> {
 
+    Usuarios findByUsername(String username);
+
 }

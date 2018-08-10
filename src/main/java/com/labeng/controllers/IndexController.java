@@ -18,7 +18,7 @@ public class IndexController {
     @RequestMapping("/conectar")
     public String logar() {
 	
-	return "pages/logar.html";
+	return "pages/login.html";
 	
     }
     

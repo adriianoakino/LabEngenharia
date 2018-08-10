@@ -139,5 +139,14 @@ public class Usuarios {
         this.pedidos = pedidos;
     }
 
+    @Override
+    public String toString() {
+	return "Usuarios [id_usuario=" + id_usuario + ", nome=" + nome + ", username=" + username + ", password="
+		+ password + ", cep=" + cep + ", logadouro=" + logadouro + ", numero=" + numero + ", estado=" + estado
+		+ ", cidade=" + cidade + ", bairro=" + bairro + ", pedidos=" + pedidos + "]";
+    }
+    
+    
+
    
 }
