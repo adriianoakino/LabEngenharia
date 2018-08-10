@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	
 </head>
 <body>
@@ -17,8 +18,8 @@
 			<li><a href="#"> Home 		</a>
 			<li><a href="#"> Serviços	</a>
 			<li><a href="#"> Contato	</a>
-			<li><button class="buttons" > Registrar</button></li>
-			<li><button class="buttons" > Acessar	</button></li>
+			<li><button class="buttons" onclick = "registrar()"> Registrar  </button></li>
+			<li><button class="buttons" onclick = "acessar()"  > Acessar	</button></li>
 		</ul>
 		<div style = "clear: both"></div>
 	</nav>
@@ -29,12 +30,22 @@
 		<div style="clear: both"></div>
 	</div>
 	
-	<section id = "banner">
+
+	<div id="slider">
+	  	<a href="#" class="control_next"> >> </a>
+	  	<a href="#" class="control_prev"> << </a>
+	  	<ul>
+			<li><img src="images/1.jpg" alt = "imagem 1"></li>
+			<li><img src="images/2.jpg" alt = "imagem 2"></li>
+			<li><img src="images/3.jpg" alt = "imagem 3"></li>
+			<li><img src="images/4.jpg" alt	= "imagem 4"></li>
+	  	</ul>  
+	</div>
+
 	
-	</section>
 	
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
 </html>
