@@ -3,7 +3,6 @@ package com.labeng.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,15 +39,14 @@ public class UsuariosController {
 	    Usuarios user = this._usuarioService.searchUsuarioByUsername(usuario.getUsername());
 	    
 	    if(user.getUsername().equals(usuario.getUsername()) && user.getPassword().equals(usuario.getPassword())) {
-		System.out.println("LOGOU");
+		return "pages/painel-home.html";
 	    } else {
-		System.out.println("NÃO LOGOU");
+		return "pages/registro.html";
 	    }
 	} catch(Exception e) {
 	    throw e;
 	}
-	
-	return "";
+
     }
 
 }

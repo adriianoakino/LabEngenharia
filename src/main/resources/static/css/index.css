@@ -6,14 +6,14 @@ body {
 	margin		: 0;
 	font-family	: "Raleway", Arial, Helvetica, sans-serif;
 	min-width	: 255px;
-	background	: #02B1B7
+	background	: #02B1B7;
 }
 
 /* ######### MENU ########## */
 
 nav {
 	width		: 100%;
-	background	: #00cdcf;
+	background	: #43A047;
 	padding		: 0 50px;
 	box-sizing	: border-box;	
 }
@@ -28,9 +28,9 @@ nav h1 {
 }
 
 nav h1 a {
-	color			: #fff;
-	text-decoration	: none;
-	font-family		: "Raleway", Arial, Helvetica, sans-serif;
+	color			: #fff	!important;
+	text-decoration	: none !important;
+	font-family		: "Raleway", Arial, Helvetica, sans-serif !important;
 }
 
 nav ul {
@@ -40,7 +40,7 @@ nav ul {
 }
 
 nav ul li {
-	list-style	: none;
+	list-style	: none !important;
 	display		: inline-block;
 	padding		: 20px 30px;
 	transition	: .8s;	
@@ -49,14 +49,14 @@ nav ul li {
 
 
 nav ul li a {
-	background 		: #00cdcf;
-	color			: #fff;
-	text-decoration	: none; 
+	background 		: #43A047 	!important;
+	color			: #fff 		!important;
+	text-decoration	: none 		!important; 
 }
 
 .menu-responsivo {
 	width		: 100%;
-	background	: #00cdcf;
+	background	: #43A047;
 	padding		: 10px 30px;
 	box-sizing	: border-box;
 	display 	: none;
@@ -70,8 +70,8 @@ nav ul li a {
 }
 
 .menu-responsivo h3 a {
-	color			: #fff;
-	text-decoration	: none;
+	color			: #fff !important;
+	text-decoration	: none !important;
 }
 
 .menu-responsivo h4 {
@@ -80,7 +80,7 @@ nav ul li a {
 	color			: #fff;
 	float			: right;
 	padding			: 5px 10px;
-	background		: #00cdcf;
+	background		: #43A047;
 	text-transform	: uppercase;
 	cursor			: pointer;
 }
@@ -94,7 +94,7 @@ nav ul li a {
     font-size				: 16px;
     width					: 100px;
     border					: none;
-    background				: #02B1B7;
+    background				: #333;
     border-radius			: 0.3em;
     -o-border-radius		: 0.3em;
     -webkit-border-radius	: 0.3em;
@@ -215,7 +215,7 @@ a.control_next {
     	font-size				: 16px;
     	width					: 90%;
     	border					: none;
-    	background				: #0bd38a;
+    	background				: #333;
    	 	border-radius			: 0.3em;
     	-o-border-radius		: 0.3em;
     	-webkit-border-radius	: 0.3em;
@@ -235,7 +235,7 @@ a.control_next {
 		display 		: block;
 		text-decoration	: none; 
 		text-align		: center;
-		background		: #02B1B7;
+		background		: #43A047;
 		padding			: 15px 20px;
 		border-bottom	: 1px solid rgba(255,255,255, .3);
 	}
@@ -248,6 +248,10 @@ a.control_next {
 	
 	h1.logo {
 		display: none;
+	}
+	
+	.form button {
+		margin-bottom: 0.4em;
 	}
 
 }
@@ -265,6 +269,10 @@ a.control_next {
     	padding: 10px 10px;
 		font-size: .7em;
 		
+	}
+	
+	.form button {
+		margin-bottom: 0.2em;
 	}
 	
 }
