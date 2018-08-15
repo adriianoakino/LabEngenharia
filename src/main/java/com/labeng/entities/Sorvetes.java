@@ -33,6 +33,15 @@ public class Sorvetes {
     @JoinColumn(name = "id_pedido" )
     private Pedidos 	pedido;
   
+    public Sorvetes() { }
+    
+    public Sorvetes(String nome, double preco, int estoque) {
+	super();
+	this.nome = nome;
+	this.preco = preco;
+	this.estoque = estoque;
+    }
+    
     public long getId_sorvete() {
         return id_sorvete;
     }
@@ -74,6 +83,13 @@ public class Sorvetes {
     public void setPedido(Pedidos pedido) {
         this.pedido = pedido;
     }
+
+    @Override
+    public String toString() {
+	return "Sorvetes [id_sorvete=" + id_sorvete + ", nome=" + nome + ", preco=" + preco + ", estoque=" + estoque
+		+ ", pedido=" + pedido + "]";
+    }
+    
     
     
 }

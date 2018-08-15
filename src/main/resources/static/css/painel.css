@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900');
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300';
 
+$padding:30px;
 
 body{
 	padding		: 0;
@@ -16,20 +18,13 @@ body{
   	-moz-osx-font-smoothing: grayscale;  
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
+
 * {
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
 }
 
-body, html {
-	height: 100%;
-	font-family: sans-serif;
-}
-
-/* ------------------------------------ */
 a {
 	margin: 0px;
 	transition: all 0.4s;
@@ -46,7 +41,6 @@ a:hover {
 	text-decoration: none;
 }
 
-/* ------------------------------------ */
 h1,h2,h3,h4,h5,h6 {margin: 0px;}
 
 p {margin: 0px;}
@@ -56,8 +50,6 @@ ul, li {
 	list-style-type: none;
 }
 
-
-/* ------------------------------------ */
 input {
   display: block;
 	outline: none;
@@ -73,7 +65,6 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-/* ------------------------------------ */
 button {
 	outline: none !important;
 	border: none;
@@ -88,40 +79,15 @@ iframe {
 	border: none !important;
 }
 
-
-
-
-
 .limiter {
   width: 100%;
   margin: 0 auto;
 }
 
-.container-table100 {
-  width: 100%;
-  min-height: 100vh;
-  background: #d1d1d1;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 33px 30px;
-}
-
-.wrap-table100 {
-  width: 1300px;
-}
-
-
 
 .pagina {
 	width: 100%;
-  	padding: 8% 0 0;
+  	padding: 5% 0 0;
   	margin: auto;
 }
 
@@ -208,14 +174,152 @@ th, td {
 
 
 
+.container-fluid {
+  position: absolute !important;
+  display: contents !important;
+  left: 50% !important;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%) !important;
+  width: 100% !important;
+}
 
+.media {
+  background-position: center !important;
+  background-size: cover !important;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 100%;
+}
 
+figure {
+	height: 370px;
+  	overflow: hidden;
+  	position: relative;
+}
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { }
+figure a {
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { }
+figure:hover .media {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {  }
+figcaption {
+  color: #252830;
+  height: calc(100% - 30px);
+  padding: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+svg {
+  height: inherit;
+  width: 100%;
+}
+
+svg text {
+  text-anchor: middle;
+}
+
+svg #alpha {
+  	fill: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+svg .title {
+  font-size: 28px;
+  font-family: "Montserrat";
+  letter-spacing: 5px;
+}
+
+svg #base {
+  fill: white;
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+}
+
+svg #base2 {
+  fill: white;
+  -webkit-mask: url(#mask2);
+  mask: url(#mask2);
+}
+
+@media only screen and (max-width: 768px) { 
+	
+	svg {
+  		height: inherit;
+  		width: 60%;
+	}
+	
+	figure {
+		height: 200px;
+	}
+	
+	figcapitation{
+    	left: -30px;
+    	width: 180px;
+	}
+	
+	figurecaption {
+		width: 170px;
+		height: calc(100% - 70px);
+	}
+
+	.caixa {
+		padding: 10px;
+	}
+	
+	.col-md-6 {
+		margin-bottom: 0.5em;
+	}
+	
+	table {
+		width: 100%;
+		max-width: 100px;
+    	overflow-x: scroll !important;
+    	margin-bottom: 20px;
+	}
+	
+	.table {
+		overflow-y: scroll;
+	}
+
+}
+
+@media only screen and (min-width:769px and max-width: 1200px) {
+
+	svg {
+  		height: inherit;
+  		width: 60%;
+	}
+	
+	figure {
+		height: 300px;
+	}
+	
+	figurecaption {
+		width: 200px;
+		height: calc(100% - 50px);
+	}
+	
+	table {
+			max-width: 100px;
+		    overflow-x: scroll !important;
+	}
+}
+
