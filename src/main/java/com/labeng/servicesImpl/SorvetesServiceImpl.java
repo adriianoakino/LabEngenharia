@@ -39,20 +39,20 @@ public class SorvetesServiceImpl implements SorvetesService {
 
     public void criaListaPicoles() {
 	
-  	addSorvete(new Sorvetes("Abacaxi", 		2.00, 30));
-  	addSorvete(new Sorvetes("Abacaxi ao Vinho", 	2.00, 40));
-  	addSorvete(new Sorvetes("Amendoim", 		2.00, 20));
-  	addSorvete(new Sorvetes("Chocolate", 		2.00, 50));
-  	addSorvete(new Sorvetes("Coco Branco", 		2.00, 60));
-  	addSorvete(new Sorvetes("Coco Queimado", 	2.00, 70));
-  	addSorvete(new Sorvetes("Gourmet Banana", 	2.00, 60));
-  	addSorvete(new Sorvetes("Goiaba ao Leite", 	2.00, 30));
-  	addSorvete(new Sorvetes("Milho Verde", 		2.00, 20));
-  	addSorvete(new Sorvetes("Morango Star", 	2.00, 10));
-  	addSorvete(new Sorvetes("Leite Ninho", 		2.00, 10));
-  	addSorvete(new Sorvetes("Torta de Limão", 	2.00, 10));
-  	addSorvete(new Sorvetes("Paleta de Leite Ninho com Nutela", 	6.00, 10));
-  	addSorvete(new Sorvetes("Paleta de Chocolate com Nutela", 	6.00, 10));
+  	addSorvete(new Sorvetes("Abacaxi", 				2.00, 30, 0));
+  	addSorvete(new Sorvetes("Abacaxi ao Vinho", 	2.00, 40, 0));
+  	addSorvete(new Sorvetes("Amendoim", 			2.00, 20, 0));
+  	addSorvete(new Sorvetes("Chocolate", 			2.00, 50, 0));
+  	addSorvete(new Sorvetes("Coco Branco", 			2.00, 60, 0));
+  	addSorvete(new Sorvetes("Coco Queimado", 		2.00, 70, 0));
+  	addSorvete(new Sorvetes("Gourmet Banana", 		2.00, 60, 0));
+  	addSorvete(new Sorvetes("Goiaba ao Leite", 		2.00, 30, 0));
+  	addSorvete(new Sorvetes("Milho Verde", 			2.00, 20, 0));
+  	addSorvete(new Sorvetes("Morango Star", 		2.00, 10, 0));
+  	addSorvete(new Sorvetes("Leite Ninho", 			2.00, 10, 0));
+  	addSorvete(new Sorvetes("Torta de Limão", 		2.00, 10, 0));
+  	addSorvete(new Sorvetes("Paleta de Leite Ninho com Nutela", 	6.00, 10, 0));
+  	addSorvete(new Sorvetes("Paleta de Chocolate com Nutela", 		6.00, 10, 0));
   	
   	
       }

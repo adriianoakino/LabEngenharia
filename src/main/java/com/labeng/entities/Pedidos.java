@@ -11,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -30,12 +32,14 @@ public class Pedidos {
     @Column(name="data")
     private Date date;
     
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "pedido")
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "ID_PEDIDOS_SORVETE",
+			joinColumns = { @JoinColumn(name = "id_pedido")},
+			inverseJoinColumns = { @JoinColumn (name = "id_sorvete") })
     private List<Sorvetes> sorvetes;
     
-    @ManyToOne( fetch = FetchType.EAGER,cascade = CascadeType.PERSIST )
-    @JoinColumn(name = "id_usuario" )
-    private Usuarios usuario;
+  
+    private String status;
 
     public long getId_pedido() {
         return id_pedido;
@@ -61,13 +65,13 @@ public class Pedidos {
         this.sorvetes = sorvetes;
     }
 
-    public Usuarios getUsuario() {
+   /* public Usuarios getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuarios usuario) {
         this.usuario = usuario;
-    }
+    }*/
 
     public Date getDate() {
         return date;
@@ -76,6 +80,21 @@ public class Pedidos {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    
+    
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Pedidos [id_pedido=" + id_pedido + ", total=" + total + ", date=" + date + ", sorvetes=" + sorvetes +"]";
+	}
     
     
     

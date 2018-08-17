@@ -8,8 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.transaction.Transactional;
 
 @Entity
 @Table(name = "Sorvetes")
@@ -29,17 +31,17 @@ public class Sorvetes {
     @Column(name="estoque", nullable = false)
     private int estoque;
     
-    @ManyToOne( fetch = FetchType.EAGER,cascade = CascadeType.PERSIST )
-    @JoinColumn(name = "id_pedido" )
-    private Pedidos 	pedido;
-  
+    @Column(name="quantidade", nullable = true)
+    private int quantidade;
+    
     public Sorvetes() { }
     
-    public Sorvetes(String nome, double preco, int estoque) {
+    public Sorvetes(String nome, double preco, int estoque, int quantidade) {
 	super();
 	this.nome = nome;
 	this.preco = preco;
 	this.estoque = estoque;
+	this.quantidade = quantidade;
     }
     
     public long getId_sorvete() {
@@ -75,21 +77,25 @@ public class Sorvetes {
     }
 
    
-    public Pedidos getPedido() {
-        return pedido;
-    }
 
-  
-    public void setPedido(Pedidos pedido) {
-        this.pedido = pedido;
-    }
+	public int getQuantidade() {
+		return quantidade;
+	}
 
-    @Override
-    public String toString() {
-	return "Sorvetes [id_sorvete=" + id_sorvete + ", nome=" + nome + ", preco=" + preco + ", estoque=" + estoque
-		+ ", pedido=" + pedido + "]";
-    }
-    
-    
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+	@Override
+	public String toString() {
+		return "Sorvetes [id_sorvete=" + id_sorvete + ", nome=" + nome + ", preco=" + preco + ", estoque=" + estoque
+				+ ", quantidade=" + quantidade + "]";
+	}
+
+   
     
 }

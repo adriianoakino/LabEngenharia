@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.com">
 <head>
 	
-	<title>Bem vindo ao Painel AUREA</title>
+	<title>Picolé Gourmet | Pedidos</title>
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,9 +15,9 @@
 	<nav>
 		<h1 class = "logo"><a href="#"> Picolé Gourmet</a></h1>
 		<ul>
-			<li><a href="/"> Home 		</a>
-			<li><a href="/"> Pedidos	</a>
-			<li><a href="/"> Contato	</a>
+			<li><a href="/home"> Home 		</a>
+			<li><a href="/pedidos"> Pedidos	</a>
+			<li><a href="/contatos"> Contato	</a>
 		</ul>
 		<div style = "clear: both"></div>
 	</nav>
@@ -33,7 +33,7 @@
 			<div class="container-fluid">
 				<div class="col-md-6">
 					<figure>
-					<div class="media" style="background:url(images/truck.png) no-repeat;"></div>			
+					<div class="media"><a href="/pedidos"><img src="images/truck.png" style="background:no-repeat;"></a></div>			
 						<figcaption>
 							<svg viewBox="0 0 200 200" version="1.1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 								<defs>
@@ -51,7 +51,7 @@
 				
 				<div class="col-md-6">
 					<figure>
-					<div class="media" style="background:url(images/contato.jpg) no-repeat;"></div>			
+					<div class="media" ><a href="/pedidos"><img src="images/contato.jpg" style="background:no-repeat;"></a></div>			
 						<figcaption>
 							<svg viewBox="0 0 200 200" version="1.1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 								<defs>
@@ -78,23 +78,52 @@
 							<tr class="linha head">
 								<th class="column column1" data-column="column1">Id 		</th>
 								<th class="column column2" data-column="column2">Data		</th>
-								<th class="column column3" data-column="column3">Pagamento	</th>
-								<th class="column column4" data-column="column4">Total R$	</th>
-								<th class="column column5" data-column="column5">Status		</th>
+								<th class="column column3" data-column="column3">Total R$	</th>
+								<th class="column column4" data-column="column4">Status		</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr class="linha">
-								<td class="column column1" data-column="column1">Lawrence Scott</td>
-								<td class="column column2" data-column="column2">8:00 AM</td>
-								<td class="column column3" data-column="column3">--</td>
-								<td class="column column4" data-column="column4">--</td>
-								<td class="column column5" data-column="column5">8:00 AM</td>
+						<tbody th:each = "pedido, index : ${pedidos}">
+							<tr class="linha" >
+								<td class="column column1" data-column="column1" th:text = "${pedido.id_pedido}"></td>
+								<td class="column column2" data-column="column2" th:text = "${pedido.date}" ></td>
+								<td class="column column3" data-column="column3" th:text = "${pedido.total}" ></td>
+								<td class="column column4" data-column="column4" th:text = "${pedido.status}" ></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
+			
+			<div class="caixa">
+				<h2> Contatos realizados</h2>
+				<div class="table pedidos m-b-110">
+					<table data-vertable="pedidos responsive">
+						<thead>
+							<tr class="linha head">
+								<th class="column column1" data-column="column1">Id 		</th>
+								<th class="column column2" data-column="column2">Assunto	</th>
+								<th class="column column3" data-column="column3">Email		</th>
+								<th class="column column4" data-column="column4">Descricao	</th>
+							</tr>
+						</thead>
+						<tbody th:each = "contatos, index : ${contatos}">
+							<tr class="linha" >
+								<td class="column column1" data-column="column1" th:text = "${pedido.id_contato}"></td>
+								<td class="column column2" data-column="column2" th:text = "${pedido.assunto}" ></td>
+								<td class="column column3" data-column="column3" th:text = "${pedido.email}" ></td>
+								<td class="column column4" data-column="column4" th:text = "${pedido.descricao}" ></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<footer>
+				
+					<p> Direitos públicos por Adriiano Akino</p>
+				
+			</footer>
+			
 	</div>	
 	
 	

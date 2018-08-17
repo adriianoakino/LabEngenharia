@@ -24,7 +24,7 @@ public class Usuarios {
     @Column(name="nome", nullable = false, length = 120)
     private String nome;
     
-    @Column(name="username", unique = true, nullable = false, length = 16)
+    @Column(name="username", unique = true, nullable = false, length = 100)
     private String username;
     
     @Column(name="password", nullable = false, length = 16)
@@ -48,8 +48,8 @@ public class Usuarios {
     @Column(name="bairro", nullable = false, length = 50)
     private String bairro;
     
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "usuario")
-    private List<Pedidos> pedidos;
+/*    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "usuario")
+    private List<Pedidos> pedidos;*/
 
     public long getId_usuario() {
         return id_usuario;
@@ -131,19 +131,19 @@ public class Usuarios {
         this.bairro = bairro;
     }
 
-    public List<Pedidos> getPedidos() {
+   /* public List<Pedidos> getPedidos() {
         return pedidos;
     }
 
     public void setPedidos(List<Pedidos> pedidos) {
         this.pedidos = pedidos;
-    }
+    }*/
 
     @Override
     public String toString() {
 	return "Usuarios [id_usuario=" + id_usuario + ", nome=" + nome + ", username=" + username + ", password="
 		+ password + ", cep=" + cep + ", logadouro=" + logadouro + ", numero=" + numero + ", estado=" + estado
-		+ ", cidade=" + cidade + ", bairro=" + bairro + ", pedidos=" + pedidos + "]";
+		+ ", cidade=" + cidade + ", bairro=" + bairro + ", pedidos=" + /*pedidos +*/ "]";
     }
     
     

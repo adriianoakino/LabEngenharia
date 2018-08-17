@@ -55,9 +55,24 @@ input:hover {
 	background-color : #ccc;
 }
 
-textarea {
-  display: block;
-  outline: none;
+footer{
+	padding		: 0;
+	margin		: 0;
+	font-family	: "Raleway", Arial, Helvetica, sans-serif !important;
+	background: #4d4d4d; 
+  	background: -webkit-linear-gradient(right, #4d4d4d, #4d4d4d);
+ 	background: -moz-linear-gradient(right, #4d4d4d, #4d4d4d);
+  	background: -o-linear-gradient(right, #4d4d4d, #4d4d4d);
+  	background: linear-gradient(to left, #4d4d4d, #4d4d4d);
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale; 
+  	height: 100px; 
+  	text-align: center;
+}
+
+footer p{
+	color: white;
+	font-size: 16px;
 }
 
 button:hover {
@@ -72,14 +87,27 @@ form {
 	display: block !important;	
 }
 
-form input {
+form .textarea {
+  font-family	: "Roboto", sans-serif;
+  outline		: 0;
+  background	: #f2f2f2 !important;
+  width			: 100%;
+  border		: 0;
+  margin		: 0 0 10px !important;
+  padding		: 15px;
+  box-sizing	: border-box;
+  height		: 200px; 
+  font-size		: 14px;
+}
+
+form .input {
   font-family	: "Roboto", sans-serif;
   outline		: 0;
   background	: #f2f2f2;
-  width			: 50%;
+  width			: 100%;
   border		: 0;
   margin		: 0 0 10px;
-  padding		: 5px;
+  padding		: 15px;
   box-sizing	: border-box;
   font-size		: 14px;
 }
