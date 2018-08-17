@@ -8,7 +8,25 @@ body {
 	min-width	: 255px;
 	background	: #02B1B7;
 }
+footer{
+	padding		: 	0;
+	margin-top		: 10px;
+	font-family	: "Raleway", Arial, Helvetica, sans-serif !important;
+	background: #43A047; 
+  	background: -webkit-linear-gradient(right, #43A047, #43A047);
+ 	background: -moz-linear-gradient(right, #43A047, #43A047);
+  	background: -o-linear-gradient(right, #43A047, #43A047);
+  	background: linear-gradient(to left, #43A047, #43A047);
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale; 
+  	height: 100px; 
+  	text-align: center;
+}
 
+footer p{
+	color: white;
+	font-size: 16px;
+}
 /* ######### MENU ########## */
 
 nav {
@@ -102,52 +120,42 @@ nav ul li a {
 }
 
 /* ############## SLIDER #################### */
-
 #slider {
-  	position		: relative;
-  	overflow		: hidden;
-  	margin			: 20px auto 0 auto;
-  	border-radius	: 4px;
-  	width			: 95% !important;
- 	box-shadow		: 5px 5px 1px rgba(0, 0, 0, .2);
-  
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  height: 300px;
+  width: 500px;
 }
 
 #slider ul {
-    position	: relative;
-    margin		: 0;
-    padding		: 0;
-    width		: 100% !important;
-    height		: 200px;
-    margin-left	: 0px !important;
-    list-style	: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
 }
 
 #slider ul li {
   position: relative;
-  display: block;
+  display: inline-block;
   float: left;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 450px;
+  width: 500px;
+  height: 300px;
   background: #ccc;
   text-align: center;
   line-height: 300px;
 }
 
-#slider ul li img {
-  	height: 100%;
-  	width: 100%;
-  	 box-shadow: 10px 10px 5px #aaaaaa;
-}
-
 a.control_prev, a.control_next {
   position: absolute;
-  top: 50%;
+  top: 40%;
   z-index: 999;
   display: block;
-  padding: 20px;
+  padding: 4% 3%;
   width: auto;
   height: auto;
   background: #2a2a2a;
@@ -179,8 +187,6 @@ a.control_next {
   width: 160px;
   font-size: 18px;
 }
-
-
 @media only screen and (max-width: 1000px) 	{ 
 /* ######### MENU ########## */
 	

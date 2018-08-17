@@ -111,6 +111,13 @@ form .input {
   box-sizing	: border-box;
   font-size		: 14px;
 }
+.oculto{
+	outline: none;
+    border: none;
+    background-color: transparent;
+		
+}
+
 form button {
   font-family		: "Roboto", sans-serif;
   text-transform	: uppercase;

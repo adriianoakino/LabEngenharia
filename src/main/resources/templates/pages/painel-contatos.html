@@ -31,10 +31,11 @@
 	<div class="pagina">	
 		<div class="caixa">
 		<form th:action="@{/contato}" th:object = "${contato}" method = "post" >
+			<div class="row">
 					<input 		class="input"		type="text" maxlength="255" id="assunto" 	name="assunto" 		placeholder="Assunto" required>
 					<input 		class="input"		type="text" maxlength="100" id="email" 		name="email" 	   	placeholder = "Email" required>
 					<textarea  	class="textarea"		  	    maxlength="255" id="descricao"   name="descricao" 	placeholder = "descricao" required></textarea>
-				
+				</div>
 				<div class = "row">
 					<button type = "button" id="cancel"> Cancelar </button>
 					<button type = "submit" id="submit"> Confirmar</button>
@@ -43,6 +44,11 @@
 			</div>
 	</div>	
 	
+	<footer>
+				
+					<p> Direitos públicos por Adriiano Akino</p>
+				
+			</footer>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
