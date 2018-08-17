@@ -30,37 +30,53 @@
 	
 	<div class="pagina">	
 		<div class="caixa">
+		<form th:action="@{/pedidos}" th:object = "${pedidos}" method = "post" id="formPedido">
 				<h2> Escolha os Sorvetes</h2>
 				<div class="table pedidos m-b-110">
-					<table data-vertable="pedidos responsive">
+					<table data-vertable="pedidos responsive" id="table">
 						<thead>
 							<tr class="linha head">
-								<th class="column column1" data-column="column1">Id 		</th>
-								<th class="column column2" data-column="column2">Nome		</th>
-								<th class="column column3" data-column="column3">Preço R$	</th>
-								<th class="column column4" data-column="column4">Estoque	</th>
-								<th class="column column4" data-column="column4">Quantidade	</th>
+								<th class="column column1" data-column="column1" >Id 		</th>
+								<th class="column column2" data-column="column2" >Nome		</th>
+								<th class="column column3" data-column="column3" >Preço R$	</th>
+								<th class="column column4" data-column="column4" >Estoque	</th>
+								<th class="column column5" data-column="column5" >Quantidade	</th>
 							</tr>
 						</thead>
-						<tbody th:each="sorvete, index : ${sorvetes}">
-							<tr class="linha">
-								<td class="column column1" data-column="column1" th:text = "${sorvete.id_sorvete}"	> Id		</td> 
-								<td class="column column2" data-column="column2" th:text = "${sorvete.nome}"		> Nome		</td>
-								<td class="column column3" data-column="column3" th:text = "${sorvete.preco}"		> Preço		</td>
-								<td class="column column4" data-column="column4" th:text = "${sorvete.estoque}"		> Estoque	</td>
-								<td class="column column4" data-column="column4" >
-									<input type="number" max-lenght="2" value="0" >
+						<tbody th:each="sorvete, index : ${sorvetes}"  id="linha">
+							<tr class="linha" th:id	 = "${index.index}" >
+								<td class="column column1" data-column="column1">
+									<input type="text" value="0" id="id_sorvete" name="id_sorvete" 	th:value = "${sorvete.id_sorvete}">
+								</td> 
+								<td class="column column2" data-column="column2">
+									<input type="text" value="0" id="nome" 		 name="nome"   		th:value = "${sorvete.nome}">
+								</td>
+								<td class="column column3" data-column="column3"> 
+									<input type="text" value="0" id="preco" 	 name="preco"  		th:value = "${sorvete.preco}">		
+								</td>
+								
+								<td class="column column4" data-column="column4"> 
+									<input type="text" value="0" id="estoque" 	 name="estoque"  		th:value = "${sorvete.estoque}">
+								</td>
+								<td class="column column5" data-column="column5" >
+									<input type="number" min="0" max="10" value="0" id="quantidade" name="quantidade">
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				
+				<div class = "row">
+					<button type = "button" id="cancel"> Cancelar </button>
+					<button type = "submit" id="submit"> Confirmar</button>
+				</div>
+			</form>
 			</div>
 	</div>	
 	
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/painel.js"></script>
 </body>
 </html>

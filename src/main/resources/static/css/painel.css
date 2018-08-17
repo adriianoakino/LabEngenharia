@@ -46,29 +46,18 @@ h1,h2,h3,h4,h5,h6 {margin: 0px;}
 p {margin: 0px;}
 
 ul, li {
-	margin: 0px;
-	list-style-type: none;
+	margin			: 0px;
+	list-style-type	: none;
 }
 
-input {
-  display: block;
-	outline: none;
-	border: none !important;
+input:hover {
+	color 			 : black;
+	background-color : #ccc;
 }
 
 textarea {
   display: block;
   outline: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
 }
 
 button:hover {
@@ -79,27 +68,61 @@ iframe {
 	border: none !important;
 }
 
+form {
+	display: block !important;	
+}
+
+form input {
+  font-family	: "Roboto", sans-serif;
+  outline		: 0;
+  background	: #f2f2f2;
+  width			: 50%;
+  border		: 0;
+  margin		: 0 0 10px;
+  padding		: 5px;
+  box-sizing	: border-box;
+  font-size		: 14px;
+}
+form button {
+  font-family		: "Roboto", sans-serif;
+  text-transform	: uppercase;
+  outline			: 0;
+  background		: #4d4d4d;
+  width				: 49%;
+  border			: 0;
+  margin-bottom		: 15px;
+  padding			: 15px;
+  color				: #FFFFFF;
+  font-size			: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition		: all 0.3 ease;
+  cursor			: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
 .limiter {
-  width: 100%;
+  width	: 100%;
   margin: 0 auto;
 }
 
 
 .pagina {
-	width: 100%;
-  	padding: 5% 0 0;
-  	margin: auto;
+	width	: 100%;
+  	padding	: 5% 0 0;
+  	margin	: auto;
 }
 
 .caixa {
-  	position: relative;
-  	z-index: 1;
-  	background: #FFFFFF;
-  	max-width: 90%;
-  	margin: 0 auto 100px;
-  	padding: 45px;
-  	text-align: center;
-  	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  	position	: relative;
+  	z-index		: 1;
+  	background	: #FFFFFF;
+  	max-width	: 90%;
+  	margin		: 0 auto 100px;
+  	padding		: 45px;
+  	text-align	: center;
+  	box-shadow	: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 
@@ -109,22 +132,22 @@ table {
 }
 
 th, td {
-  font-weight: unset;
-  padding-right: 10px;
+  font-weight	: unset;
+  padding-right	: 10px;
 }
 
 .column {
-  width: 130px;
-  padding-left: 25px;
+  width			: 130px;
+  padding-left	: 25px;
 }
 
 .column.column1 {
-  width: 265px;
-  padding-left: 42px;
+  width			: 265px;
+  padding-left	: 42px;
 }
 
 .linha.head th {
-  padding-top: 24px;
+  padding-top	: 24px;
   padding-bottom: 20px;
 }
 
@@ -175,37 +198,37 @@ th, td {
 
 
 .container-fluid {
-  position: absolute !important;
-  display: contents !important;
-  left: 50% !important;
-  top: 50% !important;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%) !important;
-  width: 100% !important;
+  position			: absolute !important;
+  display			: contents !important;
+  left				: 50% !important;
+  top				: 50% !important;
+  -webkit-transform	: translateY(-50%) translateX(-50%);
+          transform	: translateY(-50%) translateX(-50%) !important;
+  width				: 100% !important;
 }
 
 .media {
-  background-position: center !important;
-  background-size: cover !important;
-  height: 100%;
-  position: absolute;
-  transition: all 0.3s ease;
-  width: 100%;
+  background-position	: center !important;
+  background-size		: cover !important;
+  height				: 100%;
+  position				: absolute;
+  transition			: all 0.3s ease;
+  width					: 100%;
 }
 
 figure {
-	height: 370px;
-  	overflow: hidden;
-  	position: relative;
+	height		: 370px;
+  	overflow	: hidden;
+  	position	: relative;
 }
 
 figure a {
-  height: 50%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 3;
+  height	: 50%;
+  left		: 0;
+  position	: absolute;
+  top		: 0;
+  width		: 100%;
+  z-index	: 3;
 }
 
 figure:hover .media {
@@ -214,13 +237,13 @@ figure:hover .media {
 }
 
 figcaption {
-  color: #252830;
-  height: calc(100% - 30px);
-  padding: 15px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 250px;
+  color		: #252830;
+  height	: calc(100% - 30px);
+  padding	: 15px;
+  left		: 0;
+  position	: absolute;
+  top		: 0;
+  width		: 250px;
 }
 
 svg {
@@ -233,12 +256,12 @@ svg text {
 }
 
 svg #alpha {
-  	fill: white;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    text-align: center;
-    margin: 0px;
+  	fill		: white;
+    width		: 100%;
+    height		: 100%;
+    padding		: 0px;
+    text-align	: center;
+    margin		: 0px;
 }
 
 svg .title {
@@ -262,22 +285,22 @@ svg #base2 {
 @media only screen and (max-width: 768px) { 
 	
 	svg {
-  		height: inherit;
-  		width: 60%;
+  		height	: inherit;
+  		width	: 60%;
 	}
 	
 	figure {
-		height: 200px;
+		height	: 200px;
 	}
 	
 	figcapitation{
-    	left: -30px;
-    	width: 180px;
+    	left	: -30px;
+    	width	: 180px;
 	}
 	
 	figurecaption {
-		width: 170px;
-		height: calc(100% - 70px);
+		width	: 170px;
+		height	: calc(100% - 70px);
 	}
 
 	.caixa {
@@ -289,14 +312,14 @@ svg #base2 {
 	}
 	
 	table {
-		width: 100%;
-		max-width: 100px;
-    	overflow-x: scroll !important;
-    	margin-bottom: 20px;
+		width			: 100%;
+		max-width		: 100px;
+    	overflow-x		: scroll !important;
+    	margin-bottom	: 20px;
 	}
 	
 	.table {
-		overflow-y: scroll;
+		overflow-y		: scroll;
 	}
 
 }
@@ -304,22 +327,22 @@ svg #base2 {
 @media only screen and (min-width:769px and max-width: 1200px) {
 
 	svg {
-  		height: inherit;
-  		width: 60%;
+  		height	: inherit;
+  		width	: 60%;
 	}
 	
 	figure {
-		height: 300px;
+		height	: 300px;
 	}
 	
 	figurecaption {
-		width: 200px;
-		height: calc(100% - 50px);
+		width	: 200px;
+		height	: calc(100% - 50px);
 	}
 	
 	table {
-			max-width: 100px;
-		    overflow-x: scroll !important;
+		max-width	: 100px;
+		overflow-x	: scroll !important;
 	}
 }
 

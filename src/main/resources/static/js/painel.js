@@ -20,4 +20,9 @@ $(document).ready(function() {
         $(table1).find(".linha.head ."+column).removeClass('hov-column-head-'+ verTable);
     });
     
+/*    console.log('cells', document.getElementById("table").rows[1].cells.item(4).input);
+    console.log('cells', document.getElementById("table").rows[4].cells.item(0).innerHTML);
+    console.log('cells', );*/
 })
+
+
