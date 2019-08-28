@@ -2,16 +2,36 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900');
 
 body {
-	padding	: 0;
-	margin	: 0;
-	font-family		: "Raleway", Arial, Helvetica, sans-serif;
+	padding		: 0;
+	margin		: 0;
+	font-family	: "Raleway", Arial, Helvetica, sans-serif;
+	min-width	: 255px;
+	background	: #02B1B7;
+}
+footer{
+	padding		: 	0;
+	margin-top		: 10px;
+	font-family	: "Raleway", Arial, Helvetica, sans-serif !important;
+	background: #43A047; 
+  	background: -webkit-linear-gradient(right, #43A047, #43A047);
+ 	background: -moz-linear-gradient(right, #43A047, #43A047);
+  	background: -o-linear-gradient(right, #43A047, #43A047);
+  	background: linear-gradient(to left, #43A047, #43A047);
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale; 
+  	height: 100px; 
+  	text-align: center;
 }
 
+footer p{
+	color: white;
+	font-size: 16px;
+}
 /* ######### MENU ########## */
 
 nav {
 	width		: 100%;
-	background	: #00cdcf;
+	background	: #43A047;
 	padding		: 0 50px;
 	box-sizing	: border-box;	
 }
@@ -19,15 +39,16 @@ nav {
 nav h1 {
 	margin		: 0;
 	padding		: 15px 20px;
+	font-size	: 28px !important;
 	text-align	: center;
 	float		: left;
 	margin-top	: 11px;
 }
 
 nav h1 a {
-	color			: #fff;
-	text-decoration	: none;
-	font-family		: "Raleway", Arial, Helvetica, sans-serif;
+	color			: #fff	!important;
+	text-decoration	: none !important;
+	font-family		: "Raleway", Arial, Helvetica, sans-serif !important;
 }
 
 nav ul {
@@ -37,7 +58,7 @@ nav ul {
 }
 
 nav ul li {
-	list-style	: none;
+	list-style	: none !important;
 	display		: inline-block;
 	padding		: 20px 30px;
 	transition	: .8s;	
@@ -46,14 +67,14 @@ nav ul li {
 
 
 nav ul li a {
-	background 		: #00cdcf;
-	color			: #fff;
-	text-decoration	: none; 
+	background 		: #43A047 	!important;
+	color			: #fff 		!important;
+	text-decoration	: none 		!important; 
 }
 
 .menu-responsivo {
 	width		: 100%;
-	background	: #00cdcf;
+	background	: #43A047;
 	padding		: 10px 30px;
 	box-sizing	: border-box;
 	display 	: none;
@@ -67,8 +88,8 @@ nav ul li a {
 }
 
 .menu-responsivo h3 a {
-	color			: #fff;
-	text-decoration	: none;
+	color			: #fff !important;
+	text-decoration	: none !important;
 }
 
 .menu-responsivo h4 {
@@ -77,7 +98,7 @@ nav ul li a {
 	color			: #fff;
 	float			: right;
 	padding			: 5px 10px;
-	background		: #00cdcf;
+	background		: #43A047;
 	text-transform	: uppercase;
 	cursor			: pointer;
 }
@@ -91,14 +112,83 @@ nav ul li a {
     font-size				: 16px;
     width					: 100px;
     border					: none;
-    background				: #02B1B7;
+    background				: #333;
     border-radius			: 0.3em;
     -o-border-radius		: 0.3em;
     -webkit-border-radius	: 0.3em;
     -moz-border-radius		: 0.3em;
 }
 
-@media only screen and (min-width: 250px) and (max-width: 1000px) 	{ 
+/* ############## SLIDER #################### */
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  height: 300px;
+  width: 500px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+@media only screen and (max-width: 1000px) 	{ 
+/* ######### MENU ########## */
 	
 	nav {
 		display		: none;
@@ -111,6 +201,17 @@ nav ul li a {
 		display	: block;
 	}
 	
+	.menu-responsivo h3 a {
+    	font-weight: 900;
+	}
+	
+	.menu-responsivo h4 {
+    	padding: 10px 10px;
+		font-size: 1em;
+		font-weight: 900;
+		
+	}
+
 	.buttons {
 		font-family				: "Raleway", Arial, Helvetica, sans-serif;
     	color					: #fff;
@@ -120,14 +221,13 @@ nav ul li a {
     	font-size				: 16px;
     	width					: 90%;
     	border					: none;
-    	background				: #0bd38a;
+    	background				: #333;
    	 	border-radius			: 0.3em;
     	-o-border-radius		: 0.3em;
     	-webkit-border-radius	: 0.3em;
     	-moz-border-radius		: 0.3em;
 }
-	
-	
+		
 	nav h1 {
 		display	: block;
 		float	: none;
@@ -141,7 +241,7 @@ nav ul li a {
 		display 		: block;
 		text-decoration	: none; 
 		text-align		: center;
-		background		: #02B1B7;
+		background		: #43A047;
 		padding			: 15px 20px;
 		border-bottom	: 1px solid rgba(255,255,255, .3);
 	}
@@ -152,9 +252,33 @@ nav ul li a {
 		text-decoration:none;     
 	}
 	
-	
 	h1.logo {
 		display: none;
 	}
+	
+	.form button {
+		margin-bottom: 0.4em;
+	}
+
 }
-@media only screen and (min-width: 1382px) 	{ ... }
+
+@media only screen and (max-width: 768px) 	{ 
+
+	.menu-responsivo h3 a {
+    	color: #fff;
+    	text-decoration: none;
+    	font-size: .7em;
+    	font-weight: 900;
+	}
+	
+	.menu-responsivo h4 {
+    	padding: 10px 10px;
+		font-size: .7em;
+		
+	}
+	
+	.form button {
+		margin-bottom: 0.2em;
+	}
+	
+}

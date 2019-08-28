@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+	
+	<title>Picolé Gourmet | Pedidos</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/painel.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+</head>
+<body>
+	<nav>
+		<h1 class = "logo"><a href="#"> Picolé Gourmet</a></h1>
+		<ul>
+			<li><a href="/home"> Home 		</a>
+			<li><a href="/pedidos"> Pedidos	</a>
+			<li><a href="/contato"> Contato	</a>
+		</ul>
+		<div style = "clear: both"></div>
+	</nav>
+	
+	<div class = "menu-responsivo">
+		<h3 class="brand"><a href="#"> Picolé Gourmet</a></h3>
+		<h4 class="menu"> Menu </h4>
+		<div style="clear: both"></div>
+	</div>
+	
+	<div class="pagina">	
+		<div class="caixa">
+			<div class="container-fluid">
+				<div class="col-md-6">
+					<figure>
+					<div class="media"><a href="/pedidos"><img src="images/truck.png" style="background:no-repeat;"></a></div>			
+						<figcaption>
+							<svg viewBox="0 0 200 200" version="1.1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<mask id="mask" x="0" y="0" width="100%" height="100%">
+										<rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
+										<text class="title" dx="50%" dy="2.5em"> 	SOLICITAR 	</text>
+									       <text class="title" dx="50%" dy="3.5em">	PEDIDO 		</text>
+									    </mask> 
+								</defs> 
+								<rect id="base" x="0" y="0" width="100%" height="100%"></rect>			        	
+							</svg>
+						</figcaption>
+					</figure>
+				</div>
+				
+				<div class="col-md-6">
+					<figure>
+					<div class="media" ><a href="/pedidos"><img src="images/contato.jpg" style="background:no-repeat;"></a></div>			
+						<figcaption>
+							<svg viewBox="0 0 200 200" version="1.1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<mask id="mask2" x="0" y="0" width="100%" height="100%">
+										<rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
+										<text class="title" dx="50%" dy="2.5em"> 	SOLICITAR 	</text>
+									       <text class="title" dx="50%" dy="3.5em">	CONTATO		</text>
+									    </mask> 
+								</defs> 
+								<rect id="base2" x="0" y="0" width="100%" height="100%"></rect>			        	
+							</svg>
+						</figcaption>
+					</figure>
+				</div>	
+					
+			</div>			
+		</div>
+		
+		<div class="caixa">
+				<h2> Pedidos realizados</h2>
+				<div class="table pedidos m-b-110">
+					<table data-vertable="pedidos responsive">
+						<thead>
+							<tr class="linha head">
+								<th class="column column1" data-column="column1">Id 		</th>
+								<th class="column column2" data-column="column2">Data		</th>
+								<th class="column column3" data-column="column3">Total R$	</th>
+								<th class="column column4" data-column="column4">Status		</th>
+							</tr>
+						</thead>
+						<tbody th:each = "pedido, index : ${pedidos}">
+							<tr class="linha" >
+								<td class="column column1" data-column="column1" th:text = "${pedido.id_pedido}"></td>
+								<td class="column column2" data-column="column2" th:text = "${pedido.date}" ></td>
+								<td class="column column3" data-column="column3" th:text = "${pedido.total}" ></td>
+								<td class="column column4" data-column="column4" th:text = "${pedido.status}" ></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<div class="caixa">
+				<h2> Contatos realizados</h2>
+				<div class="table pedidos m-b-110">
+					<table data-vertable="pedidos responsive">
+						<thead>
+							<tr class="linha head">
+								<th class="column column1" data-column="column1">Id 		</th>
+								<th class="column column2" data-column="column2">Assunto	</th>
+								<th class="column column3" data-column="column3">Email		</th>
+								<th class="column column4" data-column="column4">Descricao	</th>
+							</tr>
+						</thead>
+						<tbody th:each = "contatos, index : ${contatos}">
+							<tr class="linha" >
+								<td class="column column1" data-column="column1" th:text = "${pedido.id_contato}"></td>
+								<td class="column column2" data-column="column2" th:text = "${pedido.assunto}" ></td>
+								<td class="column column3" data-column="column3" th:text = "${pedido.email}" ></td>
+								<td class="column column4" data-column="column4" th:text = "${pedido.descricao}" ></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<footer>
+				
+					<p> Direitos públicos por Adriiano Akino</p>
+				
+			</footer>
+			
+	</div>	
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
